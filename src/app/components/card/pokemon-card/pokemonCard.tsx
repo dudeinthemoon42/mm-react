@@ -29,7 +29,7 @@ export class PokemonCard extends React.Component {
                     Pikachu is an electric mouse Pokemon. It was the first Pokemon chosen by Ash Ketchum in the TV Series, and his closest friend.
                 </Typography>
                 </CardContent>
-                <CardActions>
+                <CardActions className="button-container">
                 <Button size="small" color="primary">
                     Share
                 </Button>

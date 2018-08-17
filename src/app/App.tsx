@@ -1,7 +1,33 @@
 import * as React from 'react';
+import { Provider } from "react-redux";
+
+import { Home } from './pages/home';
+import { configureStore } from './store/configureStore'
+
+
+class App extends React.Component {
+
+    private store = configureStore()
+
+    public render() {
+        return (
+            <Provider store={this.store}>
+                <Home/>
+            </Provider>
+        );
+  }
+}
+
+export default App;
+
+
+/*import * as React from 'react';
 import './App.css';
 
-import logo from './logo.svg';
+import { Provider } from "react-redux";
+
+import { Home } from "./pages/home";
+import { configureStore } from "./store/configureStore";
 
 import { PokemonCard } from './components/card/pokemon-card/pokemonCard';
 
@@ -11,10 +37,10 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Bobby's ReactJS Project</h1>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
+          Here we go!
         </p>
 
         <PokemonCard />
@@ -23,4 +49,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default App;*/
